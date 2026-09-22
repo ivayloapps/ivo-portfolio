@@ -40,3 +40,97 @@
   .experience-detail-grid{grid-template-columns:1fr}
   .case-links{flex-wrap:wrap}
 }
+
+
+/* V6 — Mobile polish */
+@media (max-width: 900px) {
+  body { overflow-x: hidden; }
+  .nav-shell { height: 72px; }
+  .nav-cta { padding: 7px 11px; font-size: .78rem; }
+  .hero { min-height: auto; grid-template-columns: 1fr; gap: 44px; padding: 72px 0 82px; }
+  .hero-copy { max-width: 720px; }
+  .hero h1 { font-size: clamp(3.45rem, 12vw, 5.8rem); line-height: .94; }
+  .hero h2 { font-size: clamp(1.45rem, 5vw, 2.45rem); }
+  .lead { font-size: 1rem; }
+  .portrait-wrap { min-height: 430px; }
+  .portrait { width: min(340px, 82vw); }
+  .orbit-one { width: 410px; height: 410px; }
+  .orbit-two { width: 350px; height: 350px; }
+  .card-one { left: 3%; top: 14%; }
+  .card-two { right: 2%; bottom: 12%; }
+  .section { padding: 88px 0; }
+  .project, .build-panel { gap: 36px; }
+  .terminal pre { font-size: .78rem; }
+  .architecture-diagram { align-items: stretch; }
+  .arch-node { flex: 1 1 42%; }
+  .architecture-diagram > i { display: none; }
+}
+
+@media (max-width: 640px) {
+  .nav-shell, main, footer { width: min(100% - 28px, 1180px); }
+  .nav-shell { height: 66px; }
+  .brand { font-size: 1.15rem; }
+  .nav-cta { display: none; }
+  .hero { padding: 56px 0 68px; gap: 34px; }
+  .status { font-size: .64rem; letter-spacing: .09em; line-height: 1.4; }
+  .hero h1 { font-size: clamp(3.05rem, 15vw, 4.4rem); letter-spacing: -.055em; margin: 18px 0; }
+  .hero h2 { margin-top: 14px; }
+  .lead { font-size: .96rem; line-height: 1.7; }
+  .actions { width: 100%; display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .actions .btn { width: 100%; text-align: center; }
+  .socials { gap: 16px; flex-wrap: wrap; }
+  .portrait-wrap { min-height: 365px; }
+  .portrait { width: min(285px, 78vw); border-radius: 18px; }
+  .portrait img { object-position: 50% 38%; }
+  .orbit-one { width: 330px; height: 330px; }
+  .orbit-two { width: 285px; height: 285px; }
+  .floating-card { padding: 9px 11px; max-width: 185px; }
+  .floating-card strong { font-size: .73rem; }
+  .floating-card small { font-size: .52rem; }
+  .card-one { left: 0; top: 10%; }
+  .card-two { right: 0; bottom: 8%; }
+  .ticker-track { gap: 20px; padding: 12px 0; font-size: .64rem; }
+  .section { padding: 72px 0; }
+  .kicker { font-size: .66rem; }
+  .section h2, .case-section h2 { font-size: clamp(2.15rem, 10vw, 3.25rem); margin-bottom: 24px; }
+  .two-col, .section-head, .case-grid { gap: 22px; }
+  .timeline article { grid-template-columns: 14px 1fr; gap: 16px; padding: 26px 0; }
+  .timeline .when { grid-column: 2; font-size: .64rem; }
+  .experience-detail-grid { grid-template-columns: 1fr; }
+  .experience-tags { gap: 6px; }
+  .experience-tags span { font-size: .57rem; }
+  .impact-grid, .stack-grid { grid-template-columns: 1fr; }
+  .impact-grid article, .stack-grid article { padding: 22px; }
+  .build-panel, .project { padding: 22px; border-radius: 16px; }
+  .progress-label { gap: 12px; font-size: .57rem; }
+  .roadmap > div { gap: 12px; }
+  .project-meta { flex-direction: column; gap: 5px; }
+  .chips { gap: 6px; }
+  .chips span { font-size: .68rem; }
+  .architecture { display: grid; grid-template-columns: 1fr; gap: 8px; }
+  .architecture > i { transform: rotate(90deg); justify-self: center; }
+  .architecture div { width: 100%; }
+  .terminal { border-radius: 11px; }
+  .terminal pre { padding: 20px 16px; font-size: .69rem; line-height: 1.65; }
+  .contact { text-align: left; }
+  .contact .center { justify-content: stretch; }
+  .copy-feedback { text-align: center; }
+  footer { flex-direction: column; gap: 7px; padding: 24px 0; }
+  .case-hero { padding: 76px 0 62px; }
+  .case-hero h1 { font-size: clamp(3.2rem, 14vw, 4.7rem); }
+  .case-lead { font-size: .98rem; }
+  .case-links { display: grid; grid-template-columns: 1fr; }
+  .architecture-diagram { display: grid; grid-template-columns: 1fr; }
+  .arch-node { width: 100%; }
+  .future-flow { display: grid; grid-template-columns: 1fr; gap: 7px; }
+  .future-flow i { transform: rotate(90deg); justify-self: center; }
+}
+
+@media (max-width: 380px) {
+  .hero h1 { font-size: 2.75rem; }
+  .portrait-wrap { min-height: 330px; }
+  .portrait { width: 245px; }
+  .orbit-one { width: 285px; height: 285px; }
+  .orbit-two { width: 245px; height: 245px; }
+  .floating-card { display: none; }
+}

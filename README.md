@@ -66,3 +66,16 @@ For Actions-based deployment, set **Settings → Pages → Source** to **GitHub 
 - New **Impact** section describing the types of platform problems I solve
 - Responsive **mobile navigation**
 - More detailed project architecture and roadmap presentation
+
+
+## V6 mobile improvements
+
+- Dedicated responsive pass for tablet and phone layouts
+- Mobile-specific hero typography and spacing
+- Better portrait scaling and cropping on small screens
+- Full-width mobile call-to-action buttons
+- Cleaner mobile experience timeline
+- Mobile-friendly project architecture and case-study diagrams
+- Improved terminal/code readability on narrow screens
+- Better project cards and roadmap spacing
+- Extra tuning for very small devices
