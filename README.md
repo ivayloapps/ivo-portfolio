@@ -78,3 +78,19 @@ Key fixes:
 - Experience detail cards are full-width on phones.
 - Improved hero scale, spacing, project cards, terminals and architecture diagrams.
 - Added extra layout tuning below 390px.
+
+
+## V7 — SRE Command Center
+
+V7 is an experimental presentation layer built on top of the stable mobile-responsive version.
+
+New elements:
+- SRE / Platform Engineering command center
+- Interactive engineering-domain selector
+- Engineering workflow from signal to observation
+- 30-second recruiter overview
+- Interactive portfolio terminal (`Ctrl/Cmd + K`)
+- Predefined terminal commands such as `whoami`, `focus`, `stack`, `projects`, `github`, `linkedin`, and `cv`
+- Mobile-responsive overlays and command-center panels
+
+The previous V6 design can be preserved with a Git tag or backup branch before deploying V7.
