@@ -34,10 +34,7 @@
       <a href="#projects">Projects</a>
     </nav>
 
-    <div class="nav-actions">
-      <button class="nav-quick quick-view-trigger" type="button">30 sec overview</button>
-      <a class="nav-cta" href="assets/Ivaylo-Radev-CV.pdf" target="_blank">CV ↗</a>
-    </div>
+    <a class="nav-cta" href="assets/Ivaylo-Radev-CV.pdf" target="_blank">CV ↗</a>
   </header>
 
   <main>
@@ -47,9 +44,8 @@
         <h1>Building reliable<br><span>platforms that scale.</span></h1>
         <p class="lead">I'm <strong>Ivaylo “Ivo” Radev</strong>, a Site Reliability & Platform Engineer working across enterprise CI/CD, cloud infrastructure, Kubernetes, infrastructure as code, observability and developer platforms.</p>
         <div class="actions">
-          <a class="btn primary" href="#command-center">Enter command center <span>→</span></a>
-          <button class="btn ghost terminal-trigger" type="button">Open terminal <span>⌘</span></button>
-          <a class="btn ghost compact-cv" href="assets/Ivaylo-Radev-CV.pdf" download>CV ↓</a>
+          <a class="btn primary" href="#projects">Explore my work <span>→</span></a>
+          <a class="btn ghost" href="assets/Ivaylo-Radev-CV.pdf" download>Download CV ↓</a>
         </div>
         <div class="socials">
           <a href="https://github.com/ivayloapps" target="_blank" rel="noreferrer">GitHub ↗</a>
@@ -69,91 +65,8 @@
       <span>Terraform</span><b>◆</b><span>Kubernetes</span><b>◆</b><span>Python</span><b>◆</b><span>AWS</span><b>◆</b><span>Docker</span><b>◆</b><span>GitOps</span><b>◆</b><span>Grafana</span><b>◆</b><span>Prometheus</span><b>◆</b>
     </div></div>
 
-    <section class="section command-center-section" id="command-center">
-      <div class="command-center-head">
-        <div>
-          <p class="kicker">00 / SRE COMMAND CENTER</p>
-          <h2>What I work on — at a glance.</h2>
-        </div>
-        <div class="cc-head-actions">
-          <button class="btn ghost quick-view-trigger" type="button">30 sec recruiter view</button>
-          <button class="btn ghost terminal-trigger" type="button">Terminal</button>
-        </div>
-      </div>
-
-      <div class="command-grid">
-        <article class="command-panel status-panel">
-          <div class="panel-top">
-            <span>ENGINEERING SIGNALS</span>
-            <i class="signal-dot"></i>
-          </div>
-          <div class="signal-list">
-            <div><span>Portfolio CI/CD</span><strong><i></i> ACTIVE</strong><small>GitHub Actions</small></div>
-            <div><span>Portfolio hosting</span><strong><i></i> ONLINE</strong><small>GitHub Pages</small></div>
-            <div><span>Cloud Platform API</span><strong class="dev"><i></i> DEVELOPMENT</strong><small>FastAPI · v0.1.0</small></div>
-          </div>
-        </article>
-
-        <article class="command-panel focus-panel">
-          <div class="panel-top"><span>CORE OPERATING AREAS</span><em>04</em></div>
-          <div class="focus-list">
-            <button class="focus-item active" data-focus="reliability"><span>01</span><b>Reliability</b><small>Incidents · troubleshooting · root cause</small></button>
-            <button class="focus-item" data-focus="platform"><span>02</span><b>Platform</b><small>CI/CD · developer tooling · GitOps</small></button>
-            <button class="focus-item" data-focus="infra"><span>03</span><b>Infrastructure</b><small>Terraform · Kubernetes · AWS</small></button>
-            <button class="focus-item" data-focus="access"><span>04</span><b>Access & Security</b><small>IAM · RBAC · service accounts</small></button>
-          </div>
-        </article>
-
-        <article class="command-panel detail-panel">
-          <div class="panel-top"><span>SELECTED DOMAIN</span><em id="focus-code">REL-01</em></div>
-          <h3 id="focus-title">Reliability & Troubleshooting</h3>
-          <p id="focus-text">Investigating failures across pipelines, workloads, networking and platform integrations, then turning technical findings into controlled fixes.</p>
-          <div class="focus-tools" id="focus-tools">
-            <span>Grafana</span><span>Datadog</span><span>Prometheus</span><span>Kubernetes</span>
-          </div>
-          <div class="mini-flow">
-            <span>Detect</span><i>→</i><span>Investigate</span><i>→</i><span>Fix</span><i>→</i><span>Observe</span>
-          </div>
-        </article>
-
-        <article class="command-panel project-panel">
-          <div class="panel-top"><span>CURRENT BUILD</span><em>IN PROGRESS</em></div>
-          <h3>Personal Cloud Platform</h3>
-          <p>Building a production-style platform from API foundations through containers, orchestration, IaC and observability.</p>
-          <div class="cc-progress"><span style="width:36%"></span></div>
-          <div class="milestone-row">
-            <span class="done">FastAPI ✓</span>
-            <span class="done">Tests ✓</span>
-            <span class="now">Docker →</span>
-            <span>CI/CD</span>
-            <span>K8s</span>
-          </div>
-          <a href="projects/personal-cloud-platform.html">Open case study →</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section workflow-section" id="workflow">
-      <p class="kicker">01 / HOW I WORK</p>
-      <div class="section-head">
-        <div><h2>From signal to stable system.</h2></div>
-        <p>A simplified view of the engineering loop I use when working through platform and reliability problems.</p>
-      </div>
-      <div class="ops-flow">
-        <article><span>01</span><b>Signal</b><p>Alert, failed pipeline, user report or unexpected platform behavior.</p><small>Metrics · Logs · CI/CD</small></article>
-        <i>→</i>
-        <article><span>02</span><b>Investigate</b><p>Trace the issue across identity, infrastructure, networking and workload layers.</p><small>Grafana · Datadog · Kubernetes</small></article>
-        <i>→</i>
-        <article><span>03</span><b>Root cause</b><p>Identify the configuration, policy, dependency or platform condition behind the failure.</p><small>RBAC · IAM · Git · APIs</small></article>
-        <i>→</i>
-        <article><span>04</span><b>Controlled change</b><p>Implement a reviewed and repeatable fix through code or platform configuration.</p><small>Terraform · GitOps · PR</small></article>
-        <i>→</i>
-        <article><span>05</span><b>Observe</b><p>Validate recovery and monitor the system after the change.</p><small>Metrics · Alerts · Tracing</small></article>
-      </div>
-    </section>
-
     <section class="section two-col" id="about">
-      <div><p class="kicker">02 / ABOUT</p><h2>Where infrastructure meets developer experience.</h2></div>
+      <div><p class="kicker">01 / ABOUT</p><h2>Where infrastructure meets developer experience.</h2></div>
       <div class="body-copy">
         <p>I support and improve enterprise developer platforms, cloud infrastructure, CI/CD services and observability systems. My day-to-day work includes troubleshooting pipelines, authentication and authorization, networking, repositories, secrets and Kubernetes workloads.</p>
         <p>I work with infrastructure changes through Terraform and GitOps, with a strong focus on secure access controls, operational reliability and clear cross-team technical coordination.</p>
@@ -161,7 +74,7 @@
     </section>
 
     <section class="section" id="experience">
-      <p class="kicker">03 / EXPERIENCE</p>
+      <p class="kicker">02 / EXPERIENCE</p>
       <div class="section-head">
         <div><h2>Professional journey.</h2></div>
         <p>My current work is centered on enterprise platform reliability, cloud infrastructure, CI/CD, access governance, observability and technical coordination across multiple engineering domains.</p>
@@ -216,7 +129,7 @@
     </section>
 
     <section class="section" id="achievements">
-      <p class="kicker">04 / PROOF OF WORK</p>
+      <p class="kicker">03 / IMPACT</p>
       <div class="section-head">
         <div><h2>What I actually solve.</h2></div>
         <p>A selection of engineering problems and responsibilities that reflect the kind of work I handle in platform and reliability environments.</p>
@@ -247,7 +160,7 @@
     </section>
 
     <section class="section" id="stack">
-      <p class="kicker">05 / TOOLBOX</p><h2>Systems I work with.</h2>
+      <p class="kicker">04 / TOOLBOX</p><h2>Systems I work with.</h2>
       <div class="stack-grid">
         <article class="tool-card"><div class="num">01</div><h3>Infrastructure & Cloud</h3><p>Terraform / HCL · AWS · Kubernetes · Docker · IAM</p><ul><li>Infrastructure as Code</li><li>Cloud resources & access control</li><li>Container orchestration</li></ul></article>
         <article class="tool-card"><div class="num">02</div><h3>CI/CD & Developer Platforms</h3><p>Jenkins · Bamboo · Bitbucket · Git · Atlantis · GitHub Actions</p><ul><li>Pipeline reliability</li><li>PR-based workflows</li><li>GitOps & developer enablement</li></ul></article>
@@ -257,7 +170,7 @@
     </section>
 
     <section class="section" id="building">
-      <p class="kicker">06 / CURRENTLY BUILDING</p>
+      <p class="kicker">05 / CURRENTLY BUILDING</p>
       <div class="build-panel">
         <div class="build-copy">
           <div class="live-badge"><i></i> ACTIVE PROJECT</div>
@@ -278,7 +191,7 @@
     </section>
 
     <section class="section" id="projects">
-      <p class="kicker">07 / FEATURED PROJECT</p>
+      <p class="kicker">06 / FEATURED PROJECT</p>
       <div class="project">
         <div class="project-copy">
           <div class="project-meta"><span>PERSONAL CLOUD PLATFORM</span><span>IN DEVELOPMENT</span></div>
@@ -312,7 +225,7 @@
     </section>
 
     <section class="contact section" id="contact">
-      <p class="kicker">08 / CONNECT</p><h2>Let's build reliable systems.</h2>
+      <p class="kicker">07 / CONNECT</p><h2>Let's build reliable systems.</h2>
       <p>Explore my projects, professional background and engineering work.</p>
       <div class="actions center">
         <a class="btn primary" href="https://www.linkedin.com/in/ivaylo-radev-a04452155/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
@@ -323,47 +236,6 @@
       <span class="copy-feedback" aria-live="polite"></span>
     </section>
   </main>
-
-
-  <div class="overlay-shell" id="quick-view" aria-hidden="true">
-    <div class="overlay-backdrop" data-close-overlay></div>
-    <section class="quick-card" role="dialog" aria-modal="true" aria-labelledby="quick-title">
-      <button class="overlay-close" type="button" data-close-overlay aria-label="Close">×</button>
-      <p class="kicker">30 SECOND OVERVIEW</p>
-      <h2 id="quick-title">Ivaylo “Ivo” Radev</h2>
-      <p class="quick-role">Site Reliability / Platform Engineer</p>
-      <div class="quick-grid">
-        <div><small>FOCUS</small><strong>Platform reliability, cloud infrastructure and developer tooling</strong></div>
-        <div><small>CORE STACK</small><strong>Terraform · Kubernetes · AWS · Python · CI/CD</strong></div>
-        <div><small>OPERATIONS</small><strong>RBAC · IAM · networking · observability · incident investigation</strong></div>
-        <div><small>CURRENT PROJECT</small><strong>Personal Cloud Platform</strong></div>
-      </div>
-      <div class="actions">
-        <a class="btn primary" href="assets/Ivaylo-Radev-CV.pdf" download>Download CV ↓</a>
-        <a class="btn ghost" href="https://github.com/ivayloapps" target="_blank" rel="noreferrer">GitHub ↗</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/ivaylo-radev-a04452155/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-      </div>
-    </section>
-  </div>
-
-  <div class="overlay-shell" id="terminal-overlay" aria-hidden="true">
-    <div class="overlay-backdrop" data-close-overlay></div>
-    <section class="interactive-terminal" role="dialog" aria-modal="true" aria-labelledby="terminal-title">
-      <div class="interactive-terminal-bar">
-        <div><i></i><i></i><i></i></div>
-        <span id="terminal-title">ivo@sre-portfolio:~</span>
-        <button type="button" data-close-overlay aria-label="Close terminal">×</button>
-      </div>
-      <div class="terminal-output" id="terminal-output">
-        <p><span class="term-accent">Ivo SRE Portfolio Terminal</span></p>
-        <p>Type <b>help</b> to see available commands.</p>
-      </div>
-      <form class="terminal-input-row" id="terminal-form">
-        <label for="terminal-input">ivo@sre:~$</label>
-        <input id="terminal-input" autocomplete="off" spellcheck="false" aria-label="Terminal command">
-      </form>
-    </section>
-  </div>
 
   <footer><span>© <b id="year"></b> Ivaylo Radev</span><span>Site Reliability · Platform Engineering</span></footer>
   <script src="script.js"></script>
