@@ -68,14 +68,13 @@ For Actions-based deployment, set **Settings → Pages → Source** to **GitHub 
 - More detailed project architecture and roadmap presentation
 
 
-## V6 mobile improvements
+## V6 — iPhone responsive fix
 
-- Dedicated responsive pass for tablet and phone layouts
-- Mobile-specific hero typography and spacing
-- Better portrait scaling and cropping on small screens
-- Full-width mobile call-to-action buttons
-- Cleaner mobile experience timeline
-- Mobile-friendly project architecture and case-study diagrams
-- Improved terminal/code readability on narrow screens
-- Better project cards and roadmap spacing
-- Extra tuning for very small devices
+This release includes a dedicated small-screen pass, especially for iPhone-sized viewports.
+
+Key fixes:
+- Corrected the Experience timeline layout that caused text to collapse into a narrow grid column.
+- Experience headings and company names now use the full mobile width.
+- Experience detail cards are full-width on phones.
+- Improved hero scale, spacing, project cards, terminals and architecture diagrams.
+- Added extra layout tuning below 390px.

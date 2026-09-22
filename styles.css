@@ -42,95 +42,327 @@
 }
 
 
-/* V6 — Mobile polish */
-@media (max-width: 900px) {
-  body { overflow-x: hidden; }
-  .nav-shell { height: 72px; }
-  .nav-cta { padding: 7px 11px; font-size: .78rem; }
-  .hero { min-height: auto; grid-template-columns: 1fr; gap: 44px; padding: 72px 0 82px; }
-  .hero-copy { max-width: 720px; }
-  .hero h1 { font-size: clamp(3.45rem, 12vw, 5.8rem); line-height: .94; }
-  .hero h2 { font-size: clamp(1.45rem, 5vw, 2.45rem); }
-  .lead { font-size: 1rem; }
-  .portrait-wrap { min-height: 430px; }
-  .portrait { width: min(340px, 82vw); }
-  .orbit-one { width: 410px; height: 410px; }
-  .orbit-two { width: 350px; height: 350px; }
-  .card-one { left: 3%; top: 14%; }
-  .card-two { right: 2%; bottom: 12%; }
-  .section { padding: 88px 0; }
-  .project, .build-panel { gap: 36px; }
-  .terminal pre { font-size: .78rem; }
-  .architecture-diagram { align-items: stretch; }
-  .arch-node { flex: 1 1 42%; }
-  .architecture-diagram > i { display: none; }
+/* =========================================================
+   V6 — iPhone / small-screen layout fixes
+   ========================================================= */
+
+@media (max-width: 700px) {
+  /* Keep all content inside the iPhone viewport */
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .nav-shell,
+  main,
+  footer {
+    width: calc(100% - 30px);
+    max-width: 100%;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: auto;
+    padding: 58px 0 72px;
+    gap: 34px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 14vw, 4.35rem);
+    line-height: .95;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .hero h2 {
+    font-size: clamp(1.45rem, 6vw, 2.2rem);
+  }
+
+  .lead {
+    font-size: .98rem;
+    line-height: 1.7;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .actions .btn,
+  .actions button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .portrait-wrap {
+    min-height: 370px;
+  }
+
+  .portrait {
+    width: min(285px, 80vw);
+  }
+
+  .orbit-one {
+    width: 330px;
+    height: 330px;
+  }
+
+  .orbit-two {
+    width: 285px;
+    height: 285px;
+  }
+
+  /* General sections */
+  .section {
+    padding: 74px 0;
+  }
+
+  .section h2 {
+    font-size: clamp(2.15rem, 10vw, 3.2rem);
+    line-height: 1.05;
+  }
+
+  .section-head,
+  .two-col,
+  .case-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  /*
+    Critical iPhone fix:
+    the desktop timeline uses three grid columns.
+    On mobile the content was auto-flowing into the tiny dot column,
+    which caused headings and paragraphs to wrap one word per line.
+  */
+  .timeline {
+    margin-top: 34px;
+  }
+
+  .timeline article,
+  .timeline article.active {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    padding: 30px 0 30px 24px;
+  }
+
+  .timeline .dot {
+    position: absolute;
+    left: 0;
+    top: 36px;
+    margin: 0;
+  }
+
+  .timeline .when {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 12px;
+    font-size: .66rem;
+    line-height: 1.4;
+  }
+
+  .timeline article > div:last-child {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .timeline h3 {
+    width: 100%;
+    max-width: none;
+    margin: 0 0 4px;
+    font-size: 1.35rem;
+    line-height: 1.3;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+
+  .timeline p,
+  .timeline li {
+    width: 100%;
+    max-width: none;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 7px;
+    margin: 18px 0;
+  }
+
+  .experience-tags span {
+    white-space: nowrap;
+  }
+
+  .experience-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .experience-detail-grid > div {
+    width: 100%;
+    min-width: 0;
+    padding: 18px;
+  }
+
+  .experience-detail-grid strong,
+  .experience-detail-grid p {
+    width: 100%;
+    max-width: none;
+    word-break: normal;
+  }
+
+  /* Impact and toolbox cards */
+  .impact-grid,
+  .stack-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-grid article,
+  .stack-grid article {
+    width: 100%;
+    min-width: 0;
+    padding: 22px;
+  }
+
+  /* Currently building and project */
+  .build-panel,
+  .project {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 22px;
+    gap: 30px;
+    border-radius: 16px;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .architecture {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .architecture > i {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+
+  .architecture > div {
+    width: 100%;
+  }
+
+  .terminal {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .terminal pre {
+    padding: 18px 14px;
+    font-size: .68rem;
+    line-height: 1.65;
+    max-width: 100%;
+  }
+
+  /* Case-study page */
+  .case-hero {
+    padding: 74px 0 60px;
+  }
+
+  .case-hero h1 {
+    font-size: clamp(3rem, 14vw, 4.5rem);
+    word-break: normal;
+  }
+
+  .case-links {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-diagram,
+  .future-flow {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .architecture-diagram > i,
+  .future-flow > i {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+
+  .arch-node {
+    width: 100%;
+    min-width: 0;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 7px;
+  }
 }
 
-@media (max-width: 640px) {
-  .nav-shell, main, footer { width: min(100% - 28px, 1180px); }
-  .nav-shell { height: 66px; }
-  .brand { font-size: 1.15rem; }
-  .nav-cta { display: none; }
-  .hero { padding: 56px 0 68px; gap: 34px; }
-  .status { font-size: .64rem; letter-spacing: .09em; line-height: 1.4; }
-  .hero h1 { font-size: clamp(3.05rem, 15vw, 4.4rem); letter-spacing: -.055em; margin: 18px 0; }
-  .hero h2 { margin-top: 14px; }
-  .lead { font-size: .96rem; line-height: 1.7; }
-  .actions { width: 100%; display: grid; grid-template-columns: 1fr; gap: 10px; }
-  .actions .btn { width: 100%; text-align: center; }
-  .socials { gap: 16px; flex-wrap: wrap; }
-  .portrait-wrap { min-height: 365px; }
-  .portrait { width: min(285px, 78vw); border-radius: 18px; }
-  .portrait img { object-position: 50% 38%; }
-  .orbit-one { width: 330px; height: 330px; }
-  .orbit-two { width: 285px; height: 285px; }
-  .floating-card { padding: 9px 11px; max-width: 185px; }
-  .floating-card strong { font-size: .73rem; }
-  .floating-card small { font-size: .52rem; }
-  .card-one { left: 0; top: 10%; }
-  .card-two { right: 0; bottom: 8%; }
-  .ticker-track { gap: 20px; padding: 12px 0; font-size: .64rem; }
-  .section { padding: 72px 0; }
-  .kicker { font-size: .66rem; }
-  .section h2, .case-section h2 { font-size: clamp(2.15rem, 10vw, 3.25rem); margin-bottom: 24px; }
-  .two-col, .section-head, .case-grid { gap: 22px; }
-  .timeline article { grid-template-columns: 14px 1fr; gap: 16px; padding: 26px 0; }
-  .timeline .when { grid-column: 2; font-size: .64rem; }
-  .experience-detail-grid { grid-template-columns: 1fr; }
-  .experience-tags { gap: 6px; }
-  .experience-tags span { font-size: .57rem; }
-  .impact-grid, .stack-grid { grid-template-columns: 1fr; }
-  .impact-grid article, .stack-grid article { padding: 22px; }
-  .build-panel, .project { padding: 22px; border-radius: 16px; }
-  .progress-label { gap: 12px; font-size: .57rem; }
-  .roadmap > div { gap: 12px; }
-  .project-meta { flex-direction: column; gap: 5px; }
-  .chips { gap: 6px; }
-  .chips span { font-size: .68rem; }
-  .architecture { display: grid; grid-template-columns: 1fr; gap: 8px; }
-  .architecture > i { transform: rotate(90deg); justify-self: center; }
-  .architecture div { width: 100%; }
-  .terminal { border-radius: 11px; }
-  .terminal pre { padding: 20px 16px; font-size: .69rem; line-height: 1.65; }
-  .contact { text-align: left; }
-  .contact .center { justify-content: stretch; }
-  .copy-feedback { text-align: center; }
-  footer { flex-direction: column; gap: 7px; padding: 24px 0; }
-  .case-hero { padding: 76px 0 62px; }
-  .case-hero h1 { font-size: clamp(3.2rem, 14vw, 4.7rem); }
-  .case-lead { font-size: .98rem; }
-  .case-links { display: grid; grid-template-columns: 1fr; }
-  .architecture-diagram { display: grid; grid-template-columns: 1fr; }
-  .arch-node { width: 100%; }
-  .future-flow { display: grid; grid-template-columns: 1fr; gap: 7px; }
-  .future-flow i { transform: rotate(90deg); justify-self: center; }
-}
+@media (max-width: 390px) {
+  .nav-shell,
+  main,
+  footer {
+    width: calc(100% - 24px);
+  }
 
-@media (max-width: 380px) {
-  .hero h1 { font-size: 2.75rem; }
-  .portrait-wrap { min-height: 330px; }
-  .portrait { width: 245px; }
-  .orbit-one { width: 285px; height: 285px; }
-  .orbit-two { width: 245px; height: 245px; }
-  .floating-card { display: none; }
+  .hero h1 {
+    font-size: 2.85rem;
+  }
+
+  .portrait-wrap {
+    min-height: 330px;
+  }
+
+  .portrait {
+    width: 245px;
+  }
+
+  .orbit-one {
+    width: 285px;
+    height: 285px;
+  }
+
+  .orbit-two {
+    width: 245px;
+    height: 245px;
+  }
+
+  .floating-card {
+    display: none;
+  }
+
+  .timeline article,
+  .timeline article.active {
+    padding-left: 20px;
+  }
+
+  .experience-detail-grid > div,
+  .impact-grid article,
+  .stack-grid article,
+  .build-panel,
+  .project {
+    padding: 18px;
+  }
 }
