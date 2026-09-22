@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ivaylo Radev — Site Reliability Engineer and Platform Engineer. Cloud, Kubernetes, Terraform, CI/CD and observability.">
   <meta name="theme-color" content="#07111f">
+  <meta property="og:title" content="Ivaylo Radev | SRE & Platform Engineer">
+  <meta property="og:description" content="Cloud infrastructure, Kubernetes, Terraform, CI/CD, automation and observability.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <title>Ivaylo Radev | SRE & Platform Engineer</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,7 +18,7 @@
     <a class="brand" href="#home"><span>IR</span><b>.</b></a>
     <nav>
       <a href="#about">About</a><a href="#experience">Experience</a>
-      <a href="#stack">Stack</a><a href="#projects">Projects</a>
+      <a href="#stack">Stack</a><a href="#building">Building</a><a href="#projects">Projects</a>
     </nav>
     <a class="nav-cta" href="assets/Ivaylo-Radev-CV.pdf" target="_blank">CV ↗</a>
   </header>
@@ -67,15 +71,36 @@
     <section class="section" id="stack">
       <p class="kicker">03 / TOOLBOX</p><h2>Systems I work with.</h2>
       <div class="stack-grid">
-        <article><div class="num">01</div><h3>Infrastructure & Cloud</h3><p>Terraform / HCL · AWS · Kubernetes · Docker · IAM · Infrastructure as Code</p></article>
-        <article><div class="num">02</div><h3>CI/CD & Developer Platforms</h3><p>Jenkins · Bamboo · Bitbucket · Git · Atlantis · GitOps · GitHub Actions</p></article>
-        <article><div class="num">03</div><h3>Code & Configuration</h3><p>Python · Bash · Groovy · JavaScript · YAML · JSON · HCL</p></article>
-        <article><div class="num">04</div><h3>Observability & Operations</h3><p>Datadog · Grafana · Prometheus · Alertmanager · Metrics · Logging · Tracing</p></article>
+        <article class="tool-card"><div class="num">01</div><h3>Infrastructure & Cloud</h3><p>Terraform / HCL · AWS · Kubernetes · Docker · IAM · Infrastructure as Code</p><small>Provisioning, orchestration, access control and repeatable infrastructure.</small></article>
+        <article class="tool-card"><div class="num">02</div><h3>CI/CD & Developer Platforms</h3><p>Jenkins · Bamboo · Bitbucket · Git · Atlantis · GitOps · GitHub Actions</p><small>Pipeline reliability, repository workflows and developer enablement.</small></article>
+        <article class="tool-card"><div class="num">03</div><h3>Code & Configuration</h3><p>Python · Bash · Groovy · JavaScript · YAML · JSON · HCL</p><small>Automation, scripting, configuration and platform integration.</small></article>
+        <article class="tool-card"><div class="num">04</div><h3>Observability & Operations</h3><p>Datadog · Grafana · Prometheus · Alertmanager · Metrics · Logging · Tracing</p><small>Monitoring, troubleshooting and operational visibility.</small></article>
+      </div>
+    </section>
+
+    <section class="section" id="building">
+      <p class="kicker">04 / CURRENTLY BUILDING</p>
+      <div class="build-panel">
+        <div class="build-copy">
+          <div class="live-badge"><i></i> ACTIVE PROJECT</div>
+          <h2>Personal Cloud Platform</h2>
+          <p>A production-style personal engineering environment that grows with each milestone — from API development and testing to containers, orchestration, infrastructure as code, CI/CD and observability.</p>
+          <div class="progress"><span style="width:36%"></span></div>
+          <div class="progress-label"><span>Foundation</span><span>Cloud-native platform</span></div>
+        </div>
+        <div class="roadmap">
+          <div class="done"><b>✓</b><span><strong>FastAPI service</strong><small>Health endpoint operational</small></span></div>
+          <div class="done"><b>✓</b><span><strong>Automated tests</strong><small>pytest API validation</small></span></div>
+          <div class="current"><b>→</b><span><strong>Docker</strong><small>Containerization in progress</small></span></div>
+          <div><b>○</b><span><strong>CI/CD</strong><small>Automated build & validation</small></span></div>
+          <div><b>○</b><span><strong>Kubernetes & Terraform</strong><small>Orchestration and IaC</small></span></div>
+          <div><b>○</b><span><strong>Observability</strong><small>Metrics, dashboards and alerting</small></span></div>
+        </div>
       </div>
     </section>
 
     <section class="section" id="projects">
-      <p class="kicker">04 / FEATURED PROJECT</p>
+      <p class="kicker">05 / FEATURED PROJECT</p>
       <div class="project">
         <div class="project-copy">
           <div class="project-meta"><span>PERSONAL CLOUD PLATFORM</span><span>IN DEVELOPMENT</span></div>
@@ -100,7 +125,7 @@
     </section>
 
     <section class="contact section" id="contact">
-      <p class="kicker">05 / CONNECT</p><h2>Let's build reliable systems.</h2>
+      <p class="kicker">06 / CONNECT</p><h2>Let's build reliable systems.</h2>
       <p>Explore my projects, professional background and engineering work.</p>
       <div class="actions center">
         <a class="btn primary" href="https://www.linkedin.com/in/ivaylo-radev-a04452155/" target="_blank" rel="noreferrer">LinkedIn ↗</a>

@@ -31,3 +31,13 @@ This project is designed to be deployable as a static site using GitHub Pages.
 
 **Ivaylo (Ivo) Radev**  
 Site Reliability Engineer / Platform Engineer
+
+## Quick local start
+
+### One click on Windows
+Double-click `run-site.bat`. It starts the local Python web server and opens the portfolio at `http://localhost:5500`.
+
+### From Visual Studio Code
+Run **Terminal → Run Task → Run Portfolio**, then open `http://localhost:5500`.
+
+Stop the server with `Ctrl+C` in the server terminal.
