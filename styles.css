@@ -8,3 +8,6 @@
 @keyframes pulse{50%{opacity:.35;transform:scale(.75)}}
 @media(max-width:900px){.build-panel{grid-template-columns:1fr}}
 @media(max-width:560px){.build-panel{padding:24px}}
+
+/* V4 engineering details */
+.tool-card ul{margin:18px 0 0;padding:16px 0 0 18px;border-top:1px solid #172b3d;color:#667f96;font-size:.8rem}.tool-card li{margin:5px 0}.architecture{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:25px 0}.architecture div{min-width:92px;padding:9px 11px;border:1px solid #244052;border-radius:9px;background:#091522}.architecture b,.architecture small{display:block}.architecture b{font-size:.76rem}.architecture small{color:#60758b;font:600 .58rem monospace}.architecture i{color:#5de7c4;font-style:normal}.architecture .planned{border-style:dashed;opacity:.65}.copy-email{font-family:inherit;background:transparent;cursor:pointer}.copy-feedback{display:block;min-height:22px;color:#5de7c4;font-size:.75rem}.btn:focus-visible,.nav-shell a:focus-visible{outline:2px solid #5de7c4;outline-offset:3px}

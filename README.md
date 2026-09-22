@@ -1,3 +1,6 @@
+[![Portfolio](https://img.shields.io/badge/portfolio-live-5de7c4)](https://ivayloapps.github.io/ivo-portfolio/)
+[![Deploy](https://github.com/ivayloapps/ivo-portfolio/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/ivayloapps/ivo-portfolio/actions/workflows/deploy-pages.yml)
+
 # Ivo Portfolio
 
 Professional portfolio website for **Ivaylo (Ivo) Radev** — Site Reliability Engineer / Platform Engineer.
@@ -41,3 +44,16 @@ Double-click `run-site.bat`. It starts the local Python web server and opens the
 Run **Terminal → Run Task → Run Portfolio**, then open `http://localhost:5500`.
 
 Stop the server with `Ctrl+C` in the server terminal.
+
+## CI/CD
+
+Every push to `main` triggers the GitHub Actions workflow in `.github/workflows/deploy-pages.yml`.
+
+The workflow:
+1. Checks out the repository.
+2. Verifies required portfolio files.
+3. Validates local HTML asset references.
+4. Uploads the static site as a GitHub Pages artifact.
+5. Deploys it to GitHub Pages.
+
+For Actions-based deployment, set **Settings → Pages → Source** to **GitHub Actions**.

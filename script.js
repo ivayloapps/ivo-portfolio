@@ -16,3 +16,18 @@ document.querySelectorAll(".section").forEach((section) => {
 const style = document.createElement("style");
 style.textContent = ".section.visible{opacity:1!important;transform:none!important}";
 document.head.appendChild(style);
+
+
+const copyButton = document.querySelector(".copy-email");
+const copyFeedback = document.querySelector(".copy-feedback");
+if (copyButton) {
+  copyButton.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(copyButton.dataset.email);
+      copyFeedback.textContent = "Email copied to clipboard.";
+      setTimeout(() => copyFeedback.textContent = "", 2200);
+    } catch {
+      copyFeedback.textContent = copyButton.dataset.email;
+    }
+  });
+}

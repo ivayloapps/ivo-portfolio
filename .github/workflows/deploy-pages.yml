@@ -1,0 +1,68 @@
+name: Validate and Deploy Portfolio
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify required files
+        shell: bash
+        run: |
+          test -f index.html
+          test -f styles.css
+          test -f script.js
+          test -f assets/profile.png
+          test -f assets/Ivaylo-Radev-CV.pdf
+
+      - name: Check internal asset references
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          html = Path("index.html").read_text(encoding="utf-8")
+          refs = re.findall(r'(?:src|href)="([^"#]+)"', html)
+          local = [r for r in refs if not r.startswith(("http://","https://","mailto:")) and not r.startswith("#")]
+          missing = [r for r in local if not Path(r).exists()]
+          if missing:
+              raise SystemExit("Missing local files: " + ", ".join(missing))
+          print(f"Validated {len(local)} local file references.")
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: validate
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

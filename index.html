@@ -8,6 +8,10 @@
   <meta property="og:title" content="Ivaylo Radev | SRE & Platform Engineer">
   <meta property="og:description" content="Cloud infrastructure, Kubernetes, Terraform, CI/CD, automation and observability.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/profile.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="author" content="Ivaylo Radev">
+  <meta name="keywords" content="Site Reliability Engineer, Platform Engineer, SRE, Kubernetes, Terraform, AWS, Python, CI/CD, DevOps">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <title>Ivaylo Radev | SRE & Platform Engineer</title>
   <link rel="stylesheet" href="styles.css">
@@ -71,10 +75,10 @@
     <section class="section" id="stack">
       <p class="kicker">03 / TOOLBOX</p><h2>Systems I work with.</h2>
       <div class="stack-grid">
-        <article class="tool-card"><div class="num">01</div><h3>Infrastructure & Cloud</h3><p>Terraform / HCL · AWS · Kubernetes · Docker · IAM · Infrastructure as Code</p><small>Provisioning, orchestration, access control and repeatable infrastructure.</small></article>
-        <article class="tool-card"><div class="num">02</div><h3>CI/CD & Developer Platforms</h3><p>Jenkins · Bamboo · Bitbucket · Git · Atlantis · GitOps · GitHub Actions</p><small>Pipeline reliability, repository workflows and developer enablement.</small></article>
-        <article class="tool-card"><div class="num">03</div><h3>Code & Configuration</h3><p>Python · Bash · Groovy · JavaScript · YAML · JSON · HCL</p><small>Automation, scripting, configuration and platform integration.</small></article>
-        <article class="tool-card"><div class="num">04</div><h3>Observability & Operations</h3><p>Datadog · Grafana · Prometheus · Alertmanager · Metrics · Logging · Tracing</p><small>Monitoring, troubleshooting and operational visibility.</small></article>
+        <article class="tool-card"><div class="num">01</div><h3>Infrastructure & Cloud</h3><p>Terraform / HCL · AWS · Kubernetes · Docker · IAM</p><ul><li>Infrastructure as Code</li><li>Cloud resources & access control</li><li>Container orchestration</li></ul></article>
+        <article class="tool-card"><div class="num">02</div><h3>CI/CD & Developer Platforms</h3><p>Jenkins · Bamboo · Bitbucket · Git · Atlantis · GitHub Actions</p><ul><li>Pipeline reliability</li><li>PR-based workflows</li><li>GitOps & developer enablement</li></ul></article>
+        <article class="tool-card"><div class="num">03</div><h3>Code & Configuration</h3><p>Python · Bash · Groovy · JavaScript · YAML · JSON · HCL</p><ul><li>Automation & scripting</li><li>Configuration management</li><li>Platform integrations</li></ul></article>
+        <article class="tool-card"><div class="num">04</div><h3>Observability & Operations</h3><p>Datadog · Grafana · Prometheus · Alertmanager</p><ul><li>Metrics & dashboards</li><li>Logging & tracing</li><li>Alerting & incident troubleshooting</li></ul></article>
       </div>
     </section>
 
@@ -107,6 +111,12 @@
           <h2>From API to cloud-native platform.</h2>
           <p>A hands-on engineering project built to evolve from a Python/FastAPI service into a containerized, orchestrated and observable platform using Docker, Kubernetes, Terraform and CI/CD.</p>
           <div class="chips"><span>Python</span><span>FastAPI</span><span>Docker</span><span>Kubernetes</span><span>Terraform</span></div>
+          <div class="architecture">
+            <div><b>Client</b><small>HTTP</small></div><i>→</i>
+            <div><b>FastAPI</b><small>API</small></div><i>→</i>
+            <div><b>Docker</b><small>Container</small></div><i>→</i>
+            <div class="planned"><b>Kubernetes</b><small>Planned</small></div>
+          </div>
           <a class="project-link" href="https://github.com/ivayloapps/personal-cloud-platform" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
         </div>
         <div class="terminal">
@@ -131,7 +141,9 @@
         <a class="btn primary" href="https://www.linkedin.com/in/ivaylo-radev-a04452155/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
         <a class="btn ghost" href="https://github.com/ivayloapps" target="_blank" rel="noreferrer">GitHub ↗</a>
         <a class="btn ghost" href="assets/Ivaylo-Radev-CV.pdf" download>Download CV ↓</a>
+        <button class="btn ghost copy-email" type="button" data-email="ivaylo.apps@gmail.com">Copy email</button>
       </div>
+      <span class="copy-feedback" aria-live="polite"></span>
     </section>
   </main>
 
