@@ -57,3 +57,12 @@ The workflow:
 5. Deploys it to GitHub Pages.
 
 For Actions-based deployment, set **Settings → Pages → Source** to **GitHub Actions**.
+
+
+## V5 additions
+
+- Dedicated **Personal Cloud Platform case study**
+- Expanded **Experience** section with engineering focus areas
+- New **Impact** section describing the types of platform problems I solve
+- Responsive **mobile navigation**
+- More detailed project architecture and roadmap presentation

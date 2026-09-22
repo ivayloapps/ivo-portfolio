@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Cloud Platform case study by Ivaylo Radev.">
+  <meta name="theme-color" content="#07111f">
+  <title>Personal Cloud Platform | Ivaylo Radev</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="nav-shell">
+    <a class="brand" href="../index.html"><span>IR</span><b>.</b></a>
+    <a class="nav-cta" href="../index.html#projects">← Portfolio</a>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <p class="kicker">PROJECT CASE STUDY</p>
+      <h1>Personal Cloud Platform</h1>
+      <p class="case-lead">A hands-on SRE / Platform Engineering project designed to evolve from a simple API into a containerized, orchestrated, automated and observable cloud-native platform.</p>
+
+      <div class="case-links">
+        <a class="btn primary" href="https://github.com/ivayloapps/personal-cloud-platform" target="_blank" rel="noreferrer">View repository ↗</a>
+        <a class="btn ghost" href="../index.html#building">Current roadmap →</a>
+      </div>
+    </section>
+
+    <section class="section case-section">
+      <p class="kicker">01 / WHY</p>
+      <div class="case-grid">
+        <h2>Why I built it.</h2>
+        <div>
+          <p>The project gives me a personal environment where I can build infrastructure and platform concepts from scratch, outside of enterprise systems.</p>
+          <p>The goal is not to create a tutorial-only repository. Each phase should produce a working milestone that demonstrates how application code, automation, containers, orchestration, infrastructure and observability fit together.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section case-section">
+      <p class="kicker">02 / CURRENT ARCHITECTURE</p>
+      <h2>Foundation first.</h2>
+
+      <div class="architecture-diagram">
+        <div class="arch-node"><span>01</span><strong>Client</strong><small>HTTP request</small></div>
+        <i>→</i>
+        <div class="arch-node active"><span>02</span><strong>FastAPI</strong><small>Python API</small></div>
+        <i>→</i>
+        <div class="arch-node active"><span>03</span><strong>Tests</strong><small>pytest validation</small></div>
+        <i>→</i>
+        <div class="arch-node current"><span>04</span><strong>Docker</strong><small>Containerization</small></div>
+      </div>
+
+      <div class="future-architecture">
+        <p>Planned evolution</p>
+        <div class="future-flow">
+          <span>Kubernetes</span><i>→</i><span>Terraform</span><i>→</i><span>CI/CD</span><i>→</i><span>Prometheus</span><i>→</i><span>Grafana</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section case-section">
+      <p class="kicker">03 / CURRENT IMPLEMENTATION</p>
+      <div class="case-grid">
+        <h2>What exists today.</h2>
+        <div class="case-list">
+          <article><b>FastAPI backend</b><p>Python API service with a root endpoint and health endpoint.</p></article>
+          <article><b>Health endpoint</b><p>Returns service health, name and current project version.</p></article>
+          <article><b>Automated tests</b><p>pytest validates the health endpoint and expected API response.</p></article>
+          <article><b>Docker phase</b><p>Containerization is the current active milestone.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section case-section">
+      <p class="kicker">04 / API STATUS</p>
+      <div class="terminal case-terminal">
+        <div class="terminal-bar"><i></i><i></i><i></i><span>GET /health</span></div>
+        <pre><code>{
+  <span class="key">"status"</span>: <span class="value">"healthy"</span>,
+  <span class="key">"service"</span>: <span class="value">"personal-cloud-platform-api"</span>,
+  <span class="key">"version"</span>: <span class="value">"0.1.0"</span>
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="section case-section">
+      <p class="kicker">05 / ROADMAP</p>
+      <h2>Where it goes next.</h2>
+      <div class="roadmap large-roadmap">
+        <div class="done"><b>✓</b><span><strong>FastAPI service</strong><small>Working locally</small></span></div>
+        <div class="done"><b>✓</b><span><strong>Automated tests</strong><small>pytest</small></span></div>
+        <div class="current"><b>→</b><span><strong>Docker</strong><small>Current milestone</small></span></div>
+        <div><b>○</b><span><strong>CI/CD</strong><small>Automated validation and container build</small></span></div>
+        <div><b>○</b><span><strong>Kubernetes</strong><small>Deployments, Services, ConfigMaps and probes</small></span></div>
+        <div><b>○</b><span><strong>Terraform</strong><small>Infrastructure as Code</small></span></div>
+        <div><b>○</b><span><strong>Observability</strong><small>Prometheus, Grafana, logs and alerting</small></span></div>
+      </div>
+    </section>
+
+    <section class="contact section">
+      <p class="kicker">BACK TO PORTFOLIO</p>
+      <h2>More about my engineering work.</h2>
+      <div class="actions center">
+        <a class="btn primary" href="../index.html">Portfolio →</a>
+        <a class="btn ghost" href="https://github.com/ivayloapps/personal-cloud-platform" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>Ivaylo Radev</span><span>Personal Cloud Platform · Case Study</span></footer>
+</body>
+</html>

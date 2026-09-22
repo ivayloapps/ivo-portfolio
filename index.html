@@ -20,10 +20,20 @@
   <div class="noise"></div>
   <header class="nav-shell">
     <a class="brand" href="#home"><span>IR</span><b>.</b></a>
-    <nav>
-      <a href="#about">About</a><a href="#experience">Experience</a>
-      <a href="#stack">Stack</a><a href="#building">Building</a><a href="#projects">Projects</a>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <nav class="main-nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#achievements">Impact</a>
+      <a href="#stack">Stack</a>
+      <a href="#building">Building</a>
+      <a href="#projects">Projects</a>
     </nav>
+
     <a class="nav-cta" href="assets/Ivaylo-Radev-CV.pdf" target="_blank">CV ↗</a>
   </header>
 
@@ -64,16 +74,93 @@
     </section>
 
     <section class="section" id="experience">
-      <p class="kicker">02 / EXPERIENCE</p><h2>Professional journey.</h2>
+      <p class="kicker">02 / EXPERIENCE</p>
+      <div class="section-head">
+        <div><h2>Professional journey.</h2></div>
+        <p>My current work is centered on enterprise platform reliability, cloud infrastructure, CI/CD, access governance, observability and technical coordination across multiple engineering domains.</p>
+      </div>
+
       <div class="timeline">
-        <article class="active"><div class="dot"></div><div class="when">OCT 2020 — PRESENT</div><div><h3>Site Reliability / Platform Engineer</h3><p>SB Tech (Global) Limited · Bulgaria Branch</p><ul><li>Enterprise developer platforms, cloud infrastructure, CI/CD and observability.</li><li>Terraform, GitOps, pull-request workflows and infrastructure automation.</li><li>RBAC, authentication, networking, secrets, Kubernetes and incident troubleshooting.</li></ul></div></article>
-        <article><div class="dot"></div><div class="when">JUN 2018 — OCT 2020</div><div><h3>Customer Service Coordinator</h3><p>Sutherland Global Services Bulgaria EOOD</p></div></article>
-        <article><div class="dot"></div><div class="when">2013 — 2017</div><div><h3>Internet Communications Specialist</h3><p>Asparuhovo.net · Varna</p></div></article>
+        <article class="active experience-card">
+          <div class="dot"></div>
+          <div class="when">OCT 2020 — PRESENT</div>
+          <div>
+            <h3>Site Reliability / Platform Engineer</h3>
+            <p>SB Tech (Global) Limited · Bulgaria Branch</p>
+
+            <div class="experience-tags">
+              <span>CI/CD</span><span>Cloud</span><span>Kubernetes</span><span>Terraform</span>
+              <span>Observability</span><span>RBAC</span><span>Incident Response</span>
+            </div>
+
+            <div class="experience-detail-grid">
+              <div>
+                <strong>Platform Operations</strong>
+                <p>Support enterprise developer platforms, cloud infrastructure and production-facing engineering workflows.</p>
+              </div>
+              <div>
+                <strong>Automation & IaC</strong>
+                <p>Work with Terraform, GitOps and pull-request-based infrastructure changes.</p>
+              </div>
+              <div>
+                <strong>Reliability & Troubleshooting</strong>
+                <p>Investigate CI/CD, authentication, networking, secrets, repositories and Kubernetes workload issues.</p>
+              </div>
+              <div>
+                <strong>Observability</strong>
+                <p>Support metrics, dashboards, logging, tracing, alerting and incident investigation workflows.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div class="dot"></div>
+          <div class="when">JUN 2018 — OCT 2020</div>
+          <div><h3>Customer Service Coordinator</h3><p>Sutherland Global Services Bulgaria EOOD</p></div>
+        </article>
+
+        <article>
+          <div class="dot"></div>
+          <div class="when">2013 — 2017</div>
+          <div><h3>Internet Communications Specialist</h3><p>Asparuhovo.net · Varna</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="achievements">
+      <p class="kicker">03 / IMPACT</p>
+      <div class="section-head">
+        <div><h2>What I actually solve.</h2></div>
+        <p>A selection of engineering problems and responsibilities that reflect the kind of work I handle in platform and reliability environments.</p>
+      </div>
+
+      <div class="impact-grid">
+        <article>
+          <span class="impact-index">01</span>
+          <h3>CI/CD & Pipeline Reliability</h3>
+          <p>Diagnose pipeline failures, repository integrations, webhooks, service-account access and deployment workflow issues.</p>
+        </article>
+        <article>
+          <span class="impact-index">02</span>
+          <h3>Identity & Access</h3>
+          <p>Troubleshoot RBAC, IAM, OAuth, service accounts, tokens, workload identity and access-control policies across enterprise platforms.</p>
+        </article>
+        <article>
+          <span class="impact-index">03</span>
+          <h3>Infrastructure & Networking</h3>
+          <p>Investigate Terraform changes, network policies, proxies, load balancers, IP allowlists and environment-specific infrastructure behavior.</p>
+        </article>
+        <article>
+          <span class="impact-index">04</span>
+          <h3>Observability & Incidents</h3>
+          <p>Use metrics, logs, tracing and platform telemetry to investigate production issues and translate findings into actionable fixes.</p>
+        </article>
       </div>
     </section>
 
     <section class="section" id="stack">
-      <p class="kicker">03 / TOOLBOX</p><h2>Systems I work with.</h2>
+      <p class="kicker">04 / TOOLBOX</p><h2>Systems I work with.</h2>
       <div class="stack-grid">
         <article class="tool-card"><div class="num">01</div><h3>Infrastructure & Cloud</h3><p>Terraform / HCL · AWS · Kubernetes · Docker · IAM</p><ul><li>Infrastructure as Code</li><li>Cloud resources & access control</li><li>Container orchestration</li></ul></article>
         <article class="tool-card"><div class="num">02</div><h3>CI/CD & Developer Platforms</h3><p>Jenkins · Bamboo · Bitbucket · Git · Atlantis · GitHub Actions</p><ul><li>Pipeline reliability</li><li>PR-based workflows</li><li>GitOps & developer enablement</li></ul></article>
@@ -83,7 +170,7 @@
     </section>
 
     <section class="section" id="building">
-      <p class="kicker">04 / CURRENTLY BUILDING</p>
+      <p class="kicker">05 / CURRENTLY BUILDING</p>
       <div class="build-panel">
         <div class="build-copy">
           <div class="live-badge"><i></i> ACTIVE PROJECT</div>
@@ -104,7 +191,7 @@
     </section>
 
     <section class="section" id="projects">
-      <p class="kicker">05 / FEATURED PROJECT</p>
+      <p class="kicker">06 / FEATURED PROJECT</p>
       <div class="project">
         <div class="project-copy">
           <div class="project-meta"><span>PERSONAL CLOUD PLATFORM</span><span>IN DEVELOPMENT</span></div>
@@ -117,7 +204,10 @@
             <div><b>Docker</b><small>Container</small></div><i>→</i>
             <div class="planned"><b>Kubernetes</b><small>Planned</small></div>
           </div>
-          <a class="project-link" href="https://github.com/ivayloapps/personal-cloud-platform" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
+          <div class="project-actions">
+            <a class="project-link" href="projects/personal-cloud-platform.html">View case study <span>→</span></a>
+            <a class="project-link secondary-link" href="https://github.com/ivayloapps/personal-cloud-platform" target="_blank" rel="noreferrer">Repository <span>↗</span></a>
+          </div>
         </div>
         <div class="terminal">
           <div class="terminal-bar"><i></i><i></i><i></i><span>platform-status</span></div>
@@ -135,7 +225,7 @@
     </section>
 
     <section class="contact section" id="contact">
-      <p class="kicker">06 / CONNECT</p><h2>Let's build reliable systems.</h2>
+      <p class="kicker">07 / CONNECT</p><h2>Let's build reliable systems.</h2>
       <p>Explore my projects, professional background and engineering work.</p>
       <div class="actions center">
         <a class="btn primary" href="https://www.linkedin.com/in/ivaylo-radev-a04452155/" target="_blank" rel="noreferrer">LinkedIn ↗</a>

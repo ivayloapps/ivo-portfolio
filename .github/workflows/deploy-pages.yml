@@ -30,6 +30,7 @@ jobs:
           test -f script.js
           test -f assets/profile.png
           test -f assets/Ivaylo-Radev-CV.pdf
+          test -f projects/personal-cloud-platform.html
 
       - name: Check internal asset references
         shell: python
