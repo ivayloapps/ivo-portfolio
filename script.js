@@ -1,0 +1,18 @@
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) entry.target.classList.add("visible");
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".section").forEach((section) => {
+  section.style.opacity = "0";
+  section.style.transform = "translateY(18px)";
+  section.style.transition = "opacity .7s ease, transform .7s ease";
+  observer.observe(section);
+});
+
+const style = document.createElement("style");
+style.textContent = ".section.visible{opacity:1!important;transform:none!important}";
+document.head.appendChild(style);
