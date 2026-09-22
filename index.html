@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ivaylo Radev — Site Reliability Engineer and Platform Engineer. Cloud, Kubernetes, Terraform, CI/CD and observability.">
   <meta name="theme-color" content="#07111f">
+  <link rel="canonical" href="https://ivayloapps.github.io/ivo-portfolio/">
   <meta property="og:title" content="Ivaylo Radev | SRE & Platform Engineer">
   <meta property="og:description" content="Cloud infrastructure, Kubernetes, Terraform, CI/CD, automation and observability.">
   <meta property="og:type" content="website">
@@ -15,6 +16,13 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <title>Ivaylo Radev | SRE & Platform Engineer</title>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    // Keep the public portfolio URL clean even when opened with tracking
+    // parameters or section hashes.
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  </script>
 </head>
 <body>
   <div class="noise"></div>

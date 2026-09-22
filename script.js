@@ -49,3 +49,35 @@ if (menuToggle && mainNav) {
     });
   });
 }
+
+
+// Keep internal navigation smooth without leaving #section in the address bar.
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const targetId = link.getAttribute("href");
+    if (!targetId || targetId === "#") return;
+
+    const target = document.querySelector(targetId);
+    if (!target) return;
+
+    event.preventDefault();
+
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  });
+});
+
+// If any script or browser behavior adds a query/hash later, clean it after load.
+window.addEventListener("load", () => {
+  if ((window.location.search || window.location.hash) &&
+      window.history &&
+      window.history.replaceState) {
+    window.history.replaceState(null, "", window.location.pathname);
+  }
+});

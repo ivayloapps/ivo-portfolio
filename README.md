@@ -78,3 +78,16 @@ Key fixes:
 - Experience detail cards are full-width on phones.
 - Improved hero scale, spacing, project cards, terminals and architecture diagrams.
 - Added extra layout tuning below 390px.
+
+
+## Clean public URL
+
+The portfolio now removes tracking query parameters and section hashes from the visible browser URL.
+
+The canonical public address is:
+
+```text
+https://ivayloapps.github.io/ivo-portfolio/
+```
+
+Internal navigation still scrolls smoothly to sections without leaving URLs such as `#projects` in the address bar.
