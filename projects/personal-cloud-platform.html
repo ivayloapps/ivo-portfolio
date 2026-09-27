@@ -21,11 +21,11 @@
     <section class="case-hero">
       <p class="kicker">PROJECT CASE STUDY</p>
       <h1>Personal Cloud Platform</h1>
-      <p class="case-lead">A hands-on SRE / Platform Engineering project designed to evolve from a simple API into a containerized, orchestrated, automated and observable cloud-native platform.</p>
+      <p class="case-lead">A production-style SRE / Platform Engineering project that takes a FastAPI service through PostgreSQL persistence, containers, Kubernetes, Infrastructure as Code, observability, security validation and an automated v1.0.0 release.</p>
 
       <div class="case-links">
         <a class="btn primary" href="https://github.com/ivayloapps/personal-cloud-platform" target="_blank" rel="noreferrer">View repository ↗</a>
-        <a class="btn ghost" href="../index.html#building">Current roadmap →</a>
+        <a class="btn ghost" href="https://github.com/ivayloapps/personal-cloud-platform/releases/tag/v1.0.0" target="_blank" rel="noreferrer">v1.0.0 release ↗</a>
       </div>
     </section>
 
@@ -42,35 +42,35 @@
 
     <section class="section case-section">
       <p class="kicker">02 / CURRENT ARCHITECTURE</p>
-      <h2>Foundation first.</h2>
+      <h2>Full platform lifecycle.</h2>
 
       <div class="architecture-diagram">
-        <div class="arch-node"><span>01</span><strong>Client</strong><small>HTTP request</small></div>
+        <div class="arch-node active"><span>01</span><strong>FastAPI</strong><small>Python API</small></div>
         <i>→</i>
-        <div class="arch-node active"><span>02</span><strong>FastAPI</strong><small>Python API</small></div>
+        <div class="arch-node active"><span>02</span><strong>PostgreSQL</strong><small>Persistent data</small></div>
         <i>→</i>
-        <div class="arch-node active"><span>03</span><strong>Tests</strong><small>pytest validation</small></div>
+        <div class="arch-node active"><span>03</span><strong>Kubernetes</strong><small>Runtime platform</small></div>
         <i>→</i>
-        <div class="arch-node current"><span>04</span><strong>Docker</strong><small>Containerization</small></div>
+        <div class="arch-node active"><span>04</span><strong>Observability</strong><small>Prometheus · Grafana</small></div>
       </div>
 
       <div class="future-architecture">
-        <p>Planned evolution</p>
+        <p>Delivery & operations</p>
         <div class="future-flow">
-          <span>Kubernetes</span><i>→</i><span>Terraform</span><i>→</i><span>CI/CD</span><i>→</i><span>Prometheus</span><i>→</i><span>Grafana</span>
+          <span>GitHub Actions</span><i>→</i><span>Terraform</span><i>→</i><span>Trivy</span><i>→</i><span>SBOM</span><i>→</i><span>GHCR Release</span>
         </div>
       </div>
     </section>
 
     <section class="section case-section">
-      <p class="kicker">03 / CURRENT IMPLEMENTATION</p>
+      <p class="kicker">03 / IMPLEMENTATION</p>
       <div class="case-grid">
-        <h2>What exists today.</h2>
+        <h2>What v1.0.0 delivers.</h2>
         <div class="case-list">
-          <article><b>FastAPI backend</b><p>Python API service with a root endpoint and health endpoint.</p></article>
-          <article><b>Health endpoint</b><p>Returns service health, name and current project version.</p></article>
-          <article><b>Automated tests</b><p>pytest validates the health endpoint and expected API response.</p></article>
-          <article><b>Docker phase</b><p>Containerization is the current active milestone.</p></article>
+          <article><b>Application & data</b><p>FastAPI service with PostgreSQL-backed CRUD, health/readiness endpoints and Alembic migrations.</p></article>
+          <article><b>Containers & Kubernetes</b><p>Docker runtime, Kustomize manifests, kind integration testing, persistent storage and NetworkPolicies.</p></article>
+          <article><b>IaC & CI/CD</b><p>Terraform modules validated in CI, plus automated Python, Docker and Kubernetes quality gates. Terraform remains validation-only with no automatic cloud deployment.</p></article>
+          <article><b>Observability & release security</b><p>Prometheus metrics, Grafana dashboards, Trivy scanning, CycloneDX SBOM, GHCR publishing and automated GitHub releases.</p></article>
         </div>
       </div>
     </section>
@@ -82,22 +82,22 @@
         <pre><code>{
   <span class="key">"status"</span>: <span class="value">"healthy"</span>,
   <span class="key">"service"</span>: <span class="value">"personal-cloud-platform-api"</span>,
-  <span class="key">"version"</span>: <span class="value">"0.1.0"</span>
+  <span class="key">"version"</span>: <span class="value">"1.0.0"</span>
 }</code></pre>
       </div>
     </section>
 
     <section class="section case-section">
-      <p class="kicker">05 / ROADMAP</p>
-      <h2>Where it goes next.</h2>
+      <p class="kicker">05 / DELIVERED MILESTONES</p>
+      <h2>Stable v1.0.0 platform.</h2>
       <div class="roadmap large-roadmap">
-        <div class="done"><b>✓</b><span><strong>FastAPI service</strong><small>Working locally</small></span></div>
-        <div class="done"><b>✓</b><span><strong>Automated tests</strong><small>pytest</small></span></div>
-        <div class="current"><b>→</b><span><strong>Docker</strong><small>Current milestone</small></span></div>
-        <div><b>○</b><span><strong>CI/CD</strong><small>Automated validation and container build</small></span></div>
-        <div><b>○</b><span><strong>Kubernetes</strong><small>Deployments, Services, ConfigMaps and probes</small></span></div>
-        <div><b>○</b><span><strong>Terraform</strong><small>Infrastructure as Code</small></span></div>
-        <div><b>○</b><span><strong>Observability</strong><small>Prometheus, Grafana, logs and alerting</small></span></div>
+        <div class="done"><b>✓</b><span><strong>FastAPI & PostgreSQL</strong><small>CRUD, health, readiness and persistence</small></span></div>
+        <div class="done"><b>✓</b><span><strong>Alembic & automated tests</strong><small>Database migrations and API validation</small></span></div>
+        <div class="done"><b>✓</b><span><strong>Docker & CI/CD</strong><small>Container builds and runtime smoke tests</small></span></div>
+        <div class="done"><b>✓</b><span><strong>Kubernetes</strong><small>kind deployment, PVC, probes and NetworkPolicy</small></span></div>
+        <div class="done"><b>✓</b><span><strong>Terraform</strong><small>Modular Infrastructure as Code with validation-only CI</small></span></div>
+        <div class="done"><b>✓</b><span><strong>Prometheus & Grafana</strong><small>Metrics collection and dashboard provisioning</small></span></div>
+        <div class="done"><b>✓</b><span><strong>Secure release automation</strong><small>Trivy, SBOM, GHCR and GitHub Release v1.0.0</small></span></div>
       </div>
     </section>
 

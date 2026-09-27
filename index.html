@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ivaylo Radev — Site Reliability Engineer and Platform Engineer. Cloud, Kubernetes, Terraform, CI/CD and observability.">
   <meta name="theme-color" content="#07111f">
-  <link rel="canonical" href="https://ivayloapps.github.io/ivo-portfolio/">
   <meta property="og:title" content="Ivaylo Radev | SRE & Platform Engineer">
   <meta property="og:description" content="Cloud infrastructure, Kubernetes, Terraform, CI/CD, automation and observability.">
   <meta property="og:type" content="website">
@@ -16,13 +15,6 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <title>Ivaylo Radev | SRE & Platform Engineer</title>
   <link rel="stylesheet" href="styles.css">
-  <script>
-    // Keep the public portfolio URL clean even when opened with tracking
-    // parameters or section hashes.
-    if (window.history && window.history.replaceState) {
-      window.history.replaceState(null, "", window.location.pathname);
-    }
-  </script>
 </head>
 <body>
   <div class="noise"></div>
@@ -178,22 +170,22 @@
     </section>
 
     <section class="section" id="building">
-      <p class="kicker">05 / CURRENTLY BUILDING</p>
+      <p class="kicker">05 / PLATFORM PROJECT</p>
       <div class="build-panel">
         <div class="build-copy">
-          <div class="live-badge"><i></i> ACTIVE PROJECT</div>
+          <div class="live-badge"><i></i> V1.0.0 RELEASED</div>
           <h2>Personal Cloud Platform</h2>
-          <p>A production-style personal engineering environment that grows with each milestone — from API development and testing to containers, orchestration, infrastructure as code, CI/CD and observability.</p>
-          <div class="progress"><span style="width:36%"></span></div>
-          <div class="progress-label"><span>Foundation</span><span>Cloud-native platform</span></div>
+          <p>A production-style SRE / Platform Engineering project covering the full delivery lifecycle — API, PostgreSQL, containers, Kubernetes, Infrastructure as Code, observability, security and automated releases.</p>
+          <div class="progress"><span style="width:100%"></span></div>
+          <div class="progress-label"><span>Foundation</span><span>Stable v1.0.0</span></div>
         </div>
         <div class="roadmap">
-          <div class="done"><b>✓</b><span><strong>FastAPI service</strong><small>Health endpoint operational</small></span></div>
-          <div class="done"><b>✓</b><span><strong>Automated tests</strong><small>pytest API validation</small></span></div>
-          <div class="current"><b>→</b><span><strong>Docker</strong><small>Containerization in progress</small></span></div>
-          <div><b>○</b><span><strong>CI/CD</strong><small>Automated build & validation</small></span></div>
-          <div><b>○</b><span><strong>Kubernetes & Terraform</strong><small>Orchestration and IaC</small></span></div>
-          <div><b>○</b><span><strong>Observability</strong><small>Metrics, dashboards and alerting</small></span></div>
+          <div class="done"><b>✓</b><span><strong>FastAPI & PostgreSQL</strong><small>API, CRUD and persistent data</small></span></div>
+          <div class="done"><b>✓</b><span><strong>Tests & migrations</strong><small>pytest and Alembic validation</small></span></div>
+          <div class="done"><b>✓</b><span><strong>Docker & CI/CD</strong><small>Runtime smoke tests and automation</small></span></div>
+          <div class="done"><b>✓</b><span><strong>Kubernetes</strong><small>kind, persistence and NetworkPolicy</small></span></div>
+          <div class="done"><b>✓</b><span><strong>Terraform & Observability</strong><small>IaC validation, Prometheus and Grafana</small></span></div>
+          <div class="done"><b>✓</b><span><strong>Secure release pipeline</strong><small>Trivy, SBOM, GHCR and v1.0.0 release</small></span></div>
         </div>
       </div>
     </section>
@@ -202,15 +194,15 @@
       <p class="kicker">06 / FEATURED PROJECT</p>
       <div class="project">
         <div class="project-copy">
-          <div class="project-meta"><span>PERSONAL CLOUD PLATFORM</span><span>IN DEVELOPMENT</span></div>
+          <div class="project-meta"><span>PERSONAL CLOUD PLATFORM</span><span>STABLE V1.0.0</span></div>
           <h2>From API to cloud-native platform.</h2>
-          <p>A hands-on engineering project built to evolve from a Python/FastAPI service into a containerized, orchestrated and observable platform using Docker, Kubernetes, Terraform and CI/CD.</p>
-          <div class="chips"><span>Python</span><span>FastAPI</span><span>Docker</span><span>Kubernetes</span><span>Terraform</span></div>
+          <p>A production-style Platform Engineering project combining FastAPI, PostgreSQL, Docker, Kubernetes, Terraform, GitHub Actions, Prometheus and Grafana — with persistence, security controls, vulnerability scanning, SBOM generation and automated releases.</p>
+          <div class="chips"><span>Python</span><span>Docker</span><span>Kubernetes</span><span>Terraform</span><span>Observability</span></div>
           <div class="architecture">
             <div><b>Client</b><small>HTTP</small></div><i>→</i>
             <div><b>FastAPI</b><small>API</small></div><i>→</i>
-            <div><b>Docker</b><small>Container</small></div><i>→</i>
-            <div class="planned"><b>Kubernetes</b><small>Planned</small></div>
+            <div><b>PostgreSQL</b><small>Data</small></div><i>→</i>
+            <div><b>Kubernetes</b><small>Platform</small></div>
           </div>
           <div class="project-actions">
             <a class="project-link" href="projects/personal-cloud-platform.html">View case study <span>→</span></a>
@@ -224,10 +216,10 @@
 {
   <span class="key">"status"</span>: <span class="value">"healthy"</span>,
   <span class="key">"service"</span>: <span class="value">"personal-cloud-platform-api"</span>,
-  <span class="key">"version"</span>: <span class="value">"0.1.0"</span>
+  <span class="key">"version"</span>: <span class="value">"1.0.0"</span>
 }
 
-<span class="ok">● SYSTEM OPERATIONAL</span></code></pre>
+<span class="ok">● V1.0.0 RELEASE OPERATIONAL</span></code></pre>
         </div>
       </div>
     </section>
